@@ -9,9 +9,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>Oe</h1>
-            <p>Bom dia</p>
+        <div class="container">
+            <h1>Primeira aula - Script</h1>
+            <hr />
+            <label>Nome</label>
+            <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" placeholder="Digite seu nome" required="required"></asp:TextBox>
+            <br />
+            <label>Sobrenome</label>
+            <asp:TextBox ID="txtSobrenome" runat="server" CssClass="form-control" placeholder="Digite seu sobrenome" required="required"></asp:TextBox>
+            <br />
+            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click" />
+            <br />
+            <asp:Literal ID="ltlNomeCompleto" runat="server"></asp:Literal>
         </div>
     </form>
 
