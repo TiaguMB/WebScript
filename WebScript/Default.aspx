@@ -12,14 +12,29 @@
         <div class="container">
             <h1>Primeira aula - Script</h1>
             <hr />
-            <label>Nome</label>
+            <label for="txtNome">Nome</label>
             <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" placeholder="Digite seu nome" required="required"></asp:TextBox>
             <br />
-            <label>Sobrenome</label>
+            <label for="txtSobrenome">Sobrenome</label>
             <asp:TextBox ID="txtSobrenome" runat="server" CssClass="form-control" placeholder="Digite seu sobrenome" required="required"></asp:TextBox>
+            <br />
+            <asp:DropDownList ID="ddlUF" runat="server" CssClass="form-control" required="">
+                <asp:ListItem Value="" Selected="True">-- Selecione seu estado --</asp:ListItem>
+                <asp:ListItem Value="AC">Acre</asp:ListItem>
+                <asp:ListItem Value="AP">Amapá</asp:ListItem>
+                <asp:ListItem Value="CE">Ceará</asp:ListItem>
+                <asp:ListItem Value="SP" Text="São Paulo" />
+            </asp:DropDownList>
+            <br />
+            <asp:RadioButtonList ID="rblSexo" runat="server" RepeatDirection="Horizontal">
+                <asp:ListItem Value="M">Masculino</asp:ListItem>
+                <asp:ListItem Value="F">Feminino</asp:ListItem>
+            </asp:RadioButtonList>
             <br />
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click" />
             <br />
+            <br />
+            
             <asp:Literal ID="ltlNomeCompleto" runat="server"></asp:Literal>
         </div>
     </form>

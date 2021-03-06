@@ -9,13 +9,19 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
-        ltlNomeCompleto.Text = "<div class='alert alert-success'>" + txtNome.Text + " " + txtSobrenome.Text + "</div>";
+        ltlNomeCompleto.Text += $"<div class='alert alert-success'>\n"
+            + $"<b>Nome:</b> {txtNome.Text} {txtSobrenome.Text}<br>\n"
+            + $"<b>UF:</b> {ddlUF.SelectedItem} ({ddlUF.SelectedValue})<br>\n"
+            + $"<b>Sexo:</b> {rblSexo.SelectedItem} ({rblSexo.SelectedValue})<br>\n"
+            + "</div>\n";
+
         txtNome.Text = "";
         txtSobrenome.Text = "";
+        ddlUF.ClearSelection();
+        rblSexo.ClearSelection();
     }
 }
