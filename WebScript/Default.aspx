@@ -26,10 +26,18 @@
                 <asp:ListItem Value="SP" Text="São Paulo" />
             </asp:DropDownList>
             <br />
+            <label for="rblSexo">Selecione seu sexo:</label>
             <asp:RadioButtonList ID="rblSexo" runat="server" RepeatDirection="Horizontal">
                 <asp:ListItem Value="M">Masculino</asp:ListItem>
                 <asp:ListItem Value="F">Feminino</asp:ListItem>
             </asp:RadioButtonList>
+            <br />
+            <label for="cklCurso">Marque seu(s) curso(s):</label>
+            <asp:CheckBoxList ID="cklCurso" runat="server">
+                <asp:ListItem Value="ADS" Text="Análise e Desenvolvimento de Sistemas" />
+                <asp:ListItem Value="GTI" Text="Gestão da Tecnologia da Informação" />
+                <asp:ListItem Value="GECom" Text="Gestão Comercial" />
+            </asp:CheckBoxList>
             <br />
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click" />
             <br />
