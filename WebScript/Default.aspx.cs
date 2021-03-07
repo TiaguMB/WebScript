@@ -30,7 +30,7 @@ public partial class _Default : System.Web.UI.Page
             + $"<b>Nome:</b> {txtNome.Text} {txtSobrenome.Text}<br>"
             + $"<b>UF:</b> {ddlUF.SelectedItem} ({ddlUF.SelectedValue})<br>"
             + $"<b>Sexo:</b> {rblSexo.SelectedItem} ({rblSexo.SelectedValue})<br>"
-            + $"<b>Curso(os):</b> {str}<br>"
+            + $"<b>Curso(s):</b> {str}<br>"
             + "</div>";
 
         txtNome.Text = "";

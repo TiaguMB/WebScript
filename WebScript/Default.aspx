@@ -18,7 +18,7 @@
             <label for="txtSobrenome">Sobrenome</label>
             <asp:TextBox ID="txtSobrenome" runat="server" CssClass="form-control" placeholder="Digite seu sobrenome" required="required"></asp:TextBox>
             <br />
-            <asp:DropDownList ID="ddlUF" runat="server" CssClass="form-control" required="">
+            <asp:DropDownList ID="ddlUF" runat="server" CssClass="custom-select" required="">
                 <asp:ListItem Value="" Selected="True">-- Selecione seu estado --</asp:ListItem>
                 <asp:ListItem Value="AC">Acre</asp:ListItem>
                 <asp:ListItem Value="AP">Amapá</asp:ListItem>
