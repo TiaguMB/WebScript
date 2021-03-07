@@ -19,11 +19,11 @@ public partial class _Default : System.Web.UI.Page
             .ToList();
 
         string str = "";
-        for (int i = 0; i < cklCurso.Items.Count; i++)
+        for (int i = 0; i < selected.Count; i++)
         {
             // .Value = value do HTML
             // .Text = valor dentro da tag HTML
-            str += cklCurso.Items[i].Value + ((i < cklCurso.Items.Count - 1) ? ", " : "");
+            str += selected[i].Value + ((i < selected.Count - 1) ? ", " : "");
         }
 
         ltlNomeCompleto.Text += $"<div class='alert alert-success'>"
@@ -32,6 +32,8 @@ public partial class _Default : System.Web.UI.Page
             + $"<b>Sexo:</b> {rblSexo.SelectedItem} ({rblSexo.SelectedValue})<br>"
             + $"<b>Curso(s):</b> {str}<br>"
             + "</div>";
+
+        selected.Clear();
 
         txtNome.Text = "";
         txtSobrenome.Text = "";
